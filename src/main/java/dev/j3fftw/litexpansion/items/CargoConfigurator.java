@@ -128,7 +128,7 @@ public class CargoConfigurator extends SimpleSlimefunItem<ItemUseHandler> implem
             if (copiedBlock == null || config == null) {
                 e.getPlayer().sendMessage(ChatColor.RED + "您没有复制配置!");
                 return;
-            }fig copied
+            }
 
             if (!copiedBlock.equals(blockId)) {
                 e.getPlayer().sendMessage(ChatColor.RED + "您无法将配置应用到此节点!");
