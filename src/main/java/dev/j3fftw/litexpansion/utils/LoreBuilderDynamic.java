@@ -16,7 +16,7 @@ public final class LoreBuilderDynamic {
 
 
     public static String powerBuffer(double power) {
-        return power(power, " 已储存");
+        return power(power, " 可储存");
     }
 
     public static String powerPerTick(double power) {
