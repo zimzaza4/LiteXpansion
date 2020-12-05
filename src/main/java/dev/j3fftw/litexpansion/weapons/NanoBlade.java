@@ -38,9 +38,9 @@ public class NanoBlade extends SimpleSlimefunItem<ItemUseHandler> implements Rec
 
             if (!nanoBladeMeta.removeEnchant(enchantment)) {
                 nanoBladeMeta.addEnchant(enchantment, 1, false);
-                nanoBladeMeta.setDisplayName(ChatColor.DARK_GREEN + "Nano Blade" + ChatColor.GREEN + " (On)");
+                nanoBladeMeta.setDisplayName(ChatColor.DARK_GREEN + "纳米刀刃" + ChatColor.GREEN + " (开)");
             } else {
-                nanoBladeMeta.setDisplayName(ChatColor.DARK_GREEN + "Nano Blade" + ChatColor.RED + " (Off)");
+                nanoBladeMeta.setDisplayName(ChatColor.DARK_GREEN + "纳米刀刃" + ChatColor.RED + " (关)");
             }
             event.getItem().setItemMeta(nanoBladeMeta);
         };
