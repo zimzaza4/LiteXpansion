@@ -41,7 +41,7 @@ public class Recycler extends SlimefunItem implements InventoryBlock, EnergyNetC
 
     private static final Map<BlockPosition, Integer> progress = new HashMap<>();
 
-    private static final CustomItem progressItem = new CustomItem(Material.DEAD_BUSH, "&7Progress");
+    private static final CustomItem progressItem = new CustomItem(Material.DEAD_BUSH, "&7进展");
 
     public Recycler() {
         super(Items.LITEXPANSION, Items.RECYCLER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
@@ -60,7 +60,7 @@ public class Recycler extends SlimefunItem implements InventoryBlock, EnergyNetC
             blockMenuPreset.addItem(INPUT_SLOT, null, (player, i, itemStack, clickAction) -> true);
             Utils.putOutputSlot(blockMenuPreset, OUTPUT_SLOT);
 
-            blockMenuPreset.addItem(PROGRESS_SLOT, new CustomItem(Material.DEAD_BUSH, "&7Progress"));
+            blockMenuPreset.addItem(PROGRESS_SLOT, new CustomItem(Material.DEAD_BUSH, "&7进展"));
         });
     }
 
