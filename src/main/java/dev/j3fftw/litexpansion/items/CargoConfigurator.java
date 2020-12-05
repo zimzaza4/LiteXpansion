@@ -147,11 +147,11 @@ public class CargoConfigurator extends SimpleSlimefunItem<ItemUseHandler> implem
                 lore.clear();
                 lore.addAll(defaultLore);
             }
-            lore.addAll(Arrays.asList("", ChatColor.GRAY + "> Copied "
+            lore.addAll(Arrays.asList("", ChatColor.GRAY + "> 已复制"
                 + ChatColor.RESET + clickedItemStack.getItemMeta().getDisplayName()
-                + ChatColor.GRAY + " config!"
+                + ChatColor.GRAY + " 配置!"
             ));
-            e.getPlayer().sendMessage(ChatColor.GREEN + "Copied node configuration!");
+            e.getPlayer().sendMessage(ChatColor.GREEN + "已复制配置节点!");
         }
     }
 }
