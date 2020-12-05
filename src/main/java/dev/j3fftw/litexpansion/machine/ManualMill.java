@@ -28,7 +28,7 @@ public class ManualMill extends MultiBlockMachine {
         new NamespacedKey(LiteXpansion.getInstance(), "manual_mill"),
         Items.MANUAL_MILL,
         "",
-        "&7Used to Forge Metals"
+        "&7用于锻造金属"
     );
 
     private static final ItemStack anvil = new ItemStack(Material.ANVIL);
@@ -43,7 +43,7 @@ public class ManualMill extends MultiBlockMachine {
     }
 
     protected Inventory createVirtualInventory(Inventory inv) {
-        Inventory fakeInv = Bukkit.createInventory(null, 9, "Fake Inventory");
+        Inventory fakeInv = Bukkit.createInventory(null, 9, "假库存");
 
         for (int j = 0; j < inv.getContents().length; j++) {
             ItemStack stack = inv.getContents()[j] != null && inv.getContents()[j].getAmount() > 1 ?
