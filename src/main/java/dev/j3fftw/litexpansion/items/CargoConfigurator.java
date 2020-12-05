@@ -107,7 +107,7 @@ public class CargoConfigurator extends SimpleSlimefunItem<ItemUseHandler> implem
     ) {
         PersistentDataAPI.remove(meta, CARGO_BLOCK);
         PersistentDataAPI.remove(meta, CARGO_CONFIG);
-        player.sendMessage(ChatColor.RED + "Cleared node configuration!");
+        player.sendMessage(ChatColor.RED + "清除了节点配置!");
 
         if (lore.size() != defaultLore.size()) {
             lore.clear();
@@ -126,18 +126,18 @@ public class CargoConfigurator extends SimpleSlimefunItem<ItemUseHandler> implem
             final String copiedBlock = PersistentDataAPI.getString(meta, CARGO_BLOCK);
             final String config = PersistentDataAPI.getString(meta, CARGO_CONFIG);
             if (copiedBlock == null || config == null) {
-                e.getPlayer().sendMessage(ChatColor.RED + "You do not have a config copied!");
+                e.getPlayer().sendMessage(ChatColor.RED + "您没有复制配置!");
                 return;
-            }
+            }fig copied
 
             if (!copiedBlock.equals(blockId)) {
-                e.getPlayer().sendMessage(ChatColor.RED + "You can't apply the config to this node!");
+                e.getPlayer().sendMessage(ChatColor.RED + "您无法将配置应用到此节点!");
                 return;
             }
 
             BlockStorage.setBlockInfo(e.getClickedBlock(), config, true);
             BlockStorage.getStorage(e.getClickedBlock().getWorld()).reloadInventory(e.getClickedBlock().getLocation());
-            e.getPlayer().sendMessage(ChatColor.GREEN + "Applied configuration!");
+            e.getPlayer().sendMessage(ChatColor.GREEN + "应用的配置!");
         } else if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
             PersistentDataAPI.setString(meta, CARGO_BLOCK, blockId);
             PersistentDataAPI.setString(meta, CARGO_CONFIG, BlockStorage.getBlockInfoAsJson(e.getClickedBlock()));
