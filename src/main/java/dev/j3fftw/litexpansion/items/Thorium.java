@@ -17,7 +17,7 @@ public class Thorium extends UnplaceableBlock implements Radioactive {
 
     public Thorium() {
         super(Items.LITEXPANSION, Items.THORIUM, RecipeType.GEO_MINER, new ItemStack[] {
-                null, null, null,mining to discover Thorium!");
+                null, null, null,
 
     public Thorium() {
                 null, thorium, null,
