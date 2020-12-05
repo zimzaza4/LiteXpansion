@@ -39,7 +39,7 @@ public final class UUMatter {
             try {
                 Files.copy(this.getClass().getResourceAsStream("/uumatter.yml"), uuMatterFile.toPath());
             } catch (IOException e) {
-                LiteXpansion.getInstance().getLogger().log(Level.SEVERE, "Failed to copy default uumatter.yml file", e);
+                LiteXpansion.getInstance().getLogger().log(Level.SEVERE, "无法复制默认uumatter.yml", e);
             }
         }
 
@@ -61,7 +61,7 @@ public final class UUMatter {
             this.recipes.put(output, recipe);
             addUuMatterRecipe(output, recipe);
         }
-        LiteXpansion.getInstance().getLogger().log(Level.INFO, "Loaded {0} UU-Matter recipes", new Object[] {
+        LiteXpansion.getInstance().getLogger().log(Level.INFO, "加载了 {0} 个UU物质 配方", new Object[] {
             this.recipes.size()
         });
 
@@ -81,7 +81,7 @@ public final class UUMatter {
             SlimefunItem item = SlimefunItem.getByID(id);
             if (item == null) {
                 LiteXpansion.getInstance().getLogger().log(Level.WARNING,
-                    "Unable to create recipe, unknown output item: {0}", new Object[] {id});
+                    "无法创建配方, 未知的输出项: {0}", new Object[] {id});
                 return null;
             }
             output = item.getItem().clone();
@@ -96,7 +96,7 @@ public final class UUMatter {
         for (String line : recipeList.subList(0, Math.min(recipeList.size(), 3))) {
             if (line.length() < 3) {
                 LiteXpansion.getInstance().getLogger().log(Level.WARNING,
-                    "Failed to load recipe for {0}, recipe length expected is 3 but got {1}",
+                    "无法加载配方 {0}, 配方长度预计为3，但得到了 {1}",
                     new Object[] {key, line.length()}
                 );
                 return;
