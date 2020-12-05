@@ -41,11 +41,11 @@ public class Timing {
         for (long step : steps) {
             long before = idx == 1 ? start : steps.get(idx - 1);
 
-            sb.append("\n  Step ").append(idx++).append(": ").append(time(before, step));
+            sb.append("\n  步骤 ").append(idx++).append(": ").append(time(before, step));
         }
 
         if (!steps.isEmpty()) {
-            sb.append("\n  Final step: ").append(time(steps.get(steps.size() - 1), end));
+            sb.append("\n  最后一步: ").append(time(steps.get(steps.size() - 1), end));
         }
 
         System.out.println(sb.toString());
