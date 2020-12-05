@@ -56,7 +56,7 @@ public class MassFabricator extends SlimefunItem implements InventoryBlock, Ener
     }
 
     private void setupInv() {
-        createPreset(this, "&5Mass Fabricator", blockMenuPreset -> {
+        createPreset(this, "&5UU物质制造机", blockMenuPreset -> {
             for (int i = 0; i < 27; i++)
                 blockMenuPreset.addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
 
