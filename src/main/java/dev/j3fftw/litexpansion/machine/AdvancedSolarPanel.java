@@ -29,7 +29,7 @@ public class AdvancedSolarPanel extends SlimefunItem implements InventoryBlock, 
 
     private static final int PROGRESS_SLOT = 4;
     private static final CustomItem generatingItem = new CustomItem(Material.ORANGE_STAINED_GLASS_PANE,
-        "&cNot Generating..."
+        "&c不在发电..."
     );
     public static int ADVANCED_DAY_RATE = 80;
     public static int ADVANCED_NIGHT_RATE = 10;
@@ -49,7 +49,7 @@ public class AdvancedSolarPanel extends SlimefunItem implements InventoryBlock, 
         super(Items.LITEXPANSION, type.getItem(), RecipeType.ENHANCED_CRAFTING_TABLE, type.getRecipe());
         this.type = type;
 
-        createPreset(this, type.getItem().getImmutableMeta().getDisplayName().orElse("&7Solar Panel"),
+        createPreset(this, type.getItem().getImmutableMeta().getDisplayName().orElse("&7太阳能板"),
             blockMenuPreset -> {
                 for (int i = 0; i < 9; i++)
                     blockMenuPreset.addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
@@ -67,29 +67,29 @@ public class AdvancedSolarPanel extends SlimefunItem implements InventoryBlock, 
         final boolean canGenerate = stored < getCapacity();
         final int rate = canGenerate ? getGeneratingAmount(inv.getBlock(), l.getWorld()) : 0;
 
-        String generationType = "&4Unknown";
+        String generationType = "&4未知";
 
         if (l.getWorld().getEnvironment() == World.Environment.NETHER) {
-            generationType = "&cNether &e(Day)";
+            generationType = "&c地狱 &e(白天)";
         } else if (l.getWorld().getEnvironment() == World.Environment.THE_END) {
-            generationType = "&5End &8(Night)";
+            generationType = "&5末地 &8(晚上)";
         } else if (rate == this.type.getDayGenerationRate()) {
-            generationType = "&aOverworld &e(Day)";
+            generationType = "&a主世界 &e(白天)";
         } else if (rate == this.type.getNightGenerationRate()) {
-            generationType = "&aOverworld &8(Night)";
+            generationType = "&a主世界 &8(晚上)";
         }
 
         if (inv.toInventory() != null && !inv.toInventory().getViewers().isEmpty()) {
             inv.replaceExistingItem(PROGRESS_SLOT,
-                canGenerate ? new CustomItem(Material.GREEN_STAINED_GLASS_PANE, "&aGenerating",
-                    "", "&bRate: " + generationType,
-                    "&7Generating at &6" + Utils.powerFormatAndFadeDecimals(Utils.perTickToPerSecond(rate)) + " J/s " +
+                canGenerate ? new CustomItem(Material.GREEN_STAINED_GLASS_PANE, "&a发电中",
+                    "", "&b功率: " + generationType,
+                    "&7产生于 &6" + Utils.powerFormatAndFadeDecimals(Utils.perTickToPerSecond(rate)) + " J/s " +
                         "&8(" + rate + " J/t)",
-                    "", "&7Stored: &6" + Utils.powerFormatAndFadeDecimals(stored + rate) + " J"
+                    "", "&7已储存: &6" + Utils.powerFormatAndFadeDecimals(stored + rate) + " J"
                 )
-                    : new CustomItem(Material.ORANGE_STAINED_GLASS_PANE, "&cNot Generating",
-                    "", "&7Generator has reached maximum capacity.",
-                    "", "&7Stored: &6" + Utils.powerFormatAndFadeDecimals(stored) + " J")
+                    : new CustomItem(Material.ORANGE_STAINED_GLASS_PANE, "&c不在发电",
+                    "", "&7发电机已达到最大容量",
+                    "", "&7已储存: &6" + Utils.powerFormatAndFadeDecimals(stored) + " J")
             );
         }
 
