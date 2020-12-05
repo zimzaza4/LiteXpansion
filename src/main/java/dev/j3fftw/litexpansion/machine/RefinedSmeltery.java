@@ -26,7 +26,7 @@ public class RefinedSmeltery extends MultiBlockMachine {
         new NamespacedKey(LiteXpansion.getInstance(), "refined_smeltery"),
         Items.REFINED_SMELTERY,
         "",
-        "&7Used to refine ingots"
+        "&7用于制作精炼锭"
     );
 
     private static final ItemStack stone_bricks = new ItemStack(Material.STONE_BRICKS);
