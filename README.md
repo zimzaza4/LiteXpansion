@@ -31,17 +31,17 @@ To download LiteXpansion please click here: [Download LiteXpansion](https://theb
 
 ## Contents
 ### :card_index_dividers: Items
-- Food Synthesizer - Keeps you fed with artificial food;
-- Mag Thor - An extremely durable alloy used;
-- Thorium - A radioactive alloy;
-- Mag Thor Dust - ; (W.I.P., doesn't have a function yet)
-- Thorium Dust - ; (W.I.P., doesn't have a function yet)
-- Scrap - Used to create UU-Matter;
-- UU-Matter - Used to create various other items;
-- Iridium - ; (W.I.P., doesn't have a function yet)
-- Iridium Plate - ; (W.I.P., doesn't have a function yet)
-- Refined Iron - An Ingot to create various other items; (W.I.P., doesn't have a function yet)
-- Machine Block - Used to create Machines; (W.I.P., doesn't have a function yet)
+-食物合成器-保持人造食物的营养；
+ -玛格索尔（Mag Thor）-使用了非常耐用的合金；
+ -Thor-放射性合金；
+ -玛格索尔尘-  （W.I.P.，尚无功能）
+ -Thor粉尘-;  （W.I.P.，尚无功能）
+ -废料-用于创建UU问题；
+ -UU-物质-用于创建其他各种项目；
+ -铱-;  （W.I.P.，尚无功能）
+ -铱板-;  （W.I.P.，尚无功能）
+ -精铁-制造各种其他物品的锭；  （W.I.P.，尚无功能）
+ -机器方块-用于创建机器；  （W.I.P.，尚无功能）Machines; (W.I.P., doesn't have a function yet)
 
 ### :electric_plug: Machines
 - Scrap Machine - This machine creates Scrap from every item;
