@@ -67,28 +67,28 @@ public final class Items {
         Material.GHAST_TEAR,
         "&bG玻璃刀",
         "",
-        "&7> &eLeft Click &7- Cut glass quickly",
-        "&7> &eRight Click &7- Cut glass slowly",
+        "&7> &e左键 &7- 快速模式",
+        "&7> &e右键 &7- 慢速模式",
         "",
         "&c&o&8\u21E8 &e\u26A1 &70 / 300 J"
     );
     public static final SlimefunItemStack MINING_DRILL = new SlimefunItemStack(
         "MINING_DRILL",
         Material.IRON_SHOVEL,
-        "&7Mining Drill",
+        "&7采矿钻头",
         "",
-        "&7Instantly breaks stone and stone variants",
-        "&7Right click to break block slower",
+        "&7立即打破石头",
+        "&7右键单击以减慢破坏速度",
         "",
         "&c&o&8\u21E8 &e\u26A1 &70 / 1000 J"
     );
     public static final SlimefunItemStack DIAMOND_DRILL = new SlimefunItemStack(
         "DIAMOND_DRILL",
         Material.DIAMOND_SHOVEL,
-        "&bDiamond Drill",
+        "&b钻石钻头",
         "",
-        "&7Instantly breaks obsidian, stone, and stone variants",
-        "&7Right click to break block slower",
+        "&7立即破坏黑曜石，石头",
+        "&7右键单机以减慢破坏速度",
         "",
         "&c&o&8\u21E8 &e\u26A1 &70 / 1000 J"
     );
@@ -476,13 +476,13 @@ public final class Items {
     public static final SlimefunItemStack POWER_UNIT = new SlimefunItemStack(
         "POWER_UNIT",
         Material.GOLDEN_HOE,
-        "&Power Unit"
+        "&7动力单元"
     );
 
     public static final SlimefunItemStack IRON_ITEM_CASING = new SlimefunItemStack(
         "IRON_ITEM_CASING",
         Material.GRAY_CARPET,
-        "&7Iron Item Casing"
+        "&7铁物外壳"
     );
 
     private static final Enchantment glowEnchant = Enchantment.getByKey(Constants.GLOW_ENCHANT);
